@@ -6,4 +6,6 @@ function handleClick() {
   document.getElementById('scoreValue').textContent = score;
 }
 
-document.getElementById('moaiemoji').addEventListener('click', handleClick);
+document.getElementById('clickerButton').addEventListener('click', handleClick);
+
+
