@@ -3,6 +3,10 @@ let clickRate = 1;
 let texterCost = 50;
 let redditUserCost= 100;
 let memePosterCost= 500;
+let discordUserCost= 1000;
+let easterIslandNativeCost = 2500;
+let soggyInsuranceMemberCost = 5000;
+let moaiCultistCost = 10000;
 
 function handleClick() {
   score=Math.floor(score+=clickRate);
