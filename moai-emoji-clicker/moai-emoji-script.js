@@ -1,12 +1,12 @@
 let score = 0;
 let clickRate = 1;
-let texterCost = 50;
+let texterCost = 10;
 let redditUserCost= 100;
-let memePosterCost= 500;
-let discordUserCost= 1000;
-let easterIslandNativeCost = 2500;
-let soggyInsuranceMemberCost = 5000;
-let moaiCultistCost = 10000;
+let memePosterCost= 1000;
+let discordUserCost= 10000;
+let easterIslandNativeCost = 100000;
+let soggyInsuranceMemberCost = 1000000;
+let moaiCultistCost = 10000000;
 
 function handleClick() {
   score=Math.floor(score+=clickRate);
@@ -20,7 +20,7 @@ function handleTexterPurchase() {
 
     clickRate=clickRate+1;
 
-    texterCost=Math.floor(texterCost *= 1.5);
+    texterCost=Math.floor(texterCost *= 1.2);
 
     updateScoreDisplay();
     updateTexterCost();
@@ -33,7 +33,7 @@ function handleTexterPurchase() {
   
       clickRate=clickRate+2;
   
-      redditUserCost=Math.floor(redditUserCost *= 1.5);
+      redditUserCost=Math.floor(redditUserCost *= 1.2);
   
       updateScoreDisplay();
       updateRedditUserCost();
@@ -46,10 +46,23 @@ function handleMemePosterPurchase() {
 
     clickRate=clickRate+5;
 
-    memePosterCost=Math.floor(memePosterCost *= 1.5);
+    memePosterCost=Math.floor(memePosterCost *= 1.2);
 
     updateScoreDisplay();
     updateMemePosterCost();
+  }
+}
+
+function handleDiscordUserPurchase() {
+  if (score >= discordUserCost) {
+    score=Math.floor(score -= discordUserCost);
+
+    clickRate=clickRate+10;
+
+    discordUserCost=Math.floor(discordUserCost *= 1.2);
+
+    updateScoreDisplay();
+    updateDiscordUserCost();
   }
 }
 
@@ -69,6 +82,10 @@ function updateMemePosterCost() {
   document.getElementById('memePosterCost').textContent = memePosterCost;
 }
 
+function updateDiscordUserCost() {
+  document.getElementById('discordUserCost').textContent = discordUserCost;
+}
+
 document.getElementById('clickButton').addEventListener('click', handleClick);
 
 document.getElementById('buyTexter').addEventListener('click', handleTexterPurchase);
@@ -76,3 +93,5 @@ document.getElementById('buyTexter').addEventListener('click', handleTexterPurch
 document.getElementById('buyRedditUser').addEventListener('click', handleRedditUserPurchase)
 
 document.getElementById('buyMemePoster').addEventListener('click', handleMemePosterPurchase)
+
+document.getElementById('buyDiscordUser').addEventListener('click', handleDiscordUserPurchase)
