@@ -88,18 +88,6 @@ function updateDiscordUserCost() {
   document.getElementById('discordUserCost').textContent = discordUserCost;
 }
 
-const doFunny = function(a,b) {
-  a = b;
-};
-
-const upgrade1 = doFunny(bingus, 1000); upgrade1 = 1003;
-function bingus() {
-  document.getElementById("idk").innerHTML = scoreincrease
-}
-function scoreincrease () {
-  score + 1
-}
-
 document.getElementById('clickButton').addEventListener('click', handleClick);
 
 document.getElementById('buyTexter').addEventListener('click', handleTexterPurchase);
@@ -109,5 +97,3 @@ document.getElementById('buyRedditUser').addEventListener('click', handleRedditU
 document.getElementById('buyMemePoster').addEventListener('click', handleMemePosterPurchase)
 
 document.getElementById('buyDiscordUser').addEventListener('click', handleDiscordUserPurchase)
-
-document.getElementById('').addEventListener('click', );
