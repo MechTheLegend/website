@@ -5,9 +5,8 @@ let redditUserCost= 100;
 let memePosterCost= 1000;
 let discordUserCost= 10000;
 let easterIslandNativeCost = 100000;
-let soggyInsuranceMemberCost = 1000000;
+let soggyInsuranceMemberCost = 1000000; 
 let moaiCultistCost = 10000000;
-
 
 
 function handleClick() {
@@ -87,6 +86,9 @@ function updateMemePosterCost() {
 function updateDiscordUserCost() {
   document.getElementById('discordUserCost').textContent = discordUserCost;
 }
+function updateMoaiCultistCost() {
+  document.getElementById('buyUpgradeCost').textContent = moaiCultistCost;
+}
 
 document.getElementById('clickButton').addEventListener('click', handleClick);
 
@@ -97,3 +99,5 @@ document.getElementById('buyRedditUser').addEventListener('click', handleRedditU
 document.getElementById('buyMemePoster').addEventListener('click', handleMemePosterPurchase)
 
 document.getElementById('buyDiscordUser').addEventListener('click', handleDiscordUserPurchase)
+
+document.getElementById('buyUpgrade').addEventListener('click', handleUpgradePurchase)

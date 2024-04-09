@@ -21,3 +21,8 @@ button {
 .upgrades {
   margin-left: 20px ;
 }
+
+.moai-emoji:hover {
+   transform: scale(1.05);
+
+}

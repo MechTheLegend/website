@@ -20,8 +20,6 @@ body {
 }
 
 .project-container:hover {
-    -ms-transform: scale(1.16);
-    -webkit-transform: scale(1.16);
     transform: scale(1.16); 
 }
 .project-padding {
